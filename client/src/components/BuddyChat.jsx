@@ -319,7 +319,7 @@ export default function BuddyChat() {
                 <div>
                   <div className="msg-bubble">
                   {msg.text.split('\n').map((line, i) => (
-                      <p key={i} dangerouslySetInnerHTML={{ __html: renderBuddyText(line) }} />
+                      <p key={`${msg.id}-line-${i}`} dangerouslySetInnerHTML={{ __html: renderBuddyText(line) }} />
                     ))}
                   </div>
                   <div className={`msg-time ${msg.sender}`}>{formatTime(msg.time)}</div>

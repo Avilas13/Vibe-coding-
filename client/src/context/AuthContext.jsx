@@ -8,7 +8,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('eb-progress') || 'null') || {
+      return JSON.parse(localStorage.getItem('eb-progress') ?? 'null') ?? {
         wordsLearned: 0,
         writingScore: 0,
         sessionsCount: 0,

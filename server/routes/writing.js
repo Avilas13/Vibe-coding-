@@ -62,7 +62,7 @@ const GRAMMAR_PATTERNS = [
   },
   {
     // Flag "look forward to" followed by a bare infinitive (word NOT ending in -ing)
-    pattern: /\blook\s+forward\s+to\s+(?!(?:\w+ing\b))\b\w+\b/gi,
+    pattern: /\blook\s+forward\s+to\s+(?!\w+ing\b)\b\w+\b/gi,
     message: 'After "look forward to", use a gerund (-ing form), not a bare infinitive.',
     type: 'grammar',
   },
